@@ -1,0 +1,28 @@
+.nav {
+    font-family: 'Macondo', cursive;
+    padding: 15px 20px 5px 20px;
+    background-color: #FDE0D9;
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 400;
+    font-size: 45px;
+}
+
+.menu {
+    float: right;
+}
+
+.menu-item {
+    font-family: 'Macondo', cursive;
+    font-weight: 400;
+    font-size: 21px;
+    background-color: #CAEFD1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.4);
+    margin: 5px;
+}

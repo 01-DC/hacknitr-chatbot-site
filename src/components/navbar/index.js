@@ -1,13 +1,14 @@
 import React from "react";
+import "./index.css";
 
 function Navbar() {
     return (
-        <div>
-            <h1>Comfy</h1>
-            <ul class="menu">
-                <li class="menu-item">sign up</li>
-                <li class="menu-item">log in</li>
-            </ul>
+        <div class="nav">
+            <h1 class="logo">Comfy</h1>
+            <div class="menu">
+                <button class="menu-item" href="#">sign up</button>
+                <button class="menu-item" href="#">log in</button>
+            </div>
         </div>
     );
 };
