@@ -1,0 +1,601 @@
+.websiteBody {
+  margin: 0;
+}
+.Page {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  pointer-events: auto;
+}
+.Page-outer {
+  pointer-events: none;
+  z-index: 1;
+}
+.Frame {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  width: 100%;
+  margin-left: 0;
+  height: 100%;
+  min-width: 253px;
+  max-width: 100%;
+  margin: auto;
+  background-color: rgba(252, 255, 233, 1);
+  overflow: hidden;
+}
+.Frame-outer {
+  pointer-events: none;
+  z-index: 2;
+}
+.Navbar {
+  position: relative;
+  z-index: 4;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 100%;
+  min-width: 80%;
+  height: 71px;
+  margin-top: 0px;
+  margin-bottom: 953px;
+  min-height: 71px;
+}
+.Navbar-outer {
+  pointer-events: none;
+  z-index: 4;
+  position: relative;
+  display: flex;
+}
+.Rectangle-1 {
+  position: relative;
+  z-index: 5;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 100%;
+  min-width: 1440px;
+  height: 71px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 71px;
+  background-color: rgba(253, 224, 217, 1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.Rectangle-1-outer {
+  pointer-events: none;
+  z-index: 5;
+  position: relative;
+  display: flex;
+}
+.Rectangle-2 {
+  position: relative;
+  z-index: 7;
+  pointer-events: none;
+  margin-left: 82.4%;
+  width: 89px;
+  min-width: 89px;
+  height: 39px;
+  margin-top: -55px;
+  margin-bottom: 16px;
+  min-height: 39px;
+  background-color: rgba(202, 239, 209, 1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 11.034482955932617px;
+}
+.Rectangle-2-outer {
+  pointer-events: none;
+  z-index: 7;
+  position: relative;
+  display: flex;
+}
+.Rectangle-3 {
+  position: relative;
+  z-index: 6;
+  pointer-events: none;
+  margin-left: 92%;
+  width: 89px;
+  min-width: 89px;
+  height: 39px;
+  margin-top: -55px;
+  margin-bottom: 16px;
+  min-height: 39px;
+  background-color: rgba(202, 239, 209, 1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 11.034482955932617px;
+}
+.Rectangle-3-outer {
+  pointer-events: none;
+  z-index: 6;
+  position: relative;
+  display: flex;
+}
+.Comfy {
+  position: relative;
+  z-index: 8;
+  pointer-events: none;
+  margin-left: 76px;
+  width: 243px;
+  min-width: 243px;
+  margin-top: -54px;
+  margin-bottom: 18px;
+  min-height: 36px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-style: normal;
+  font-family: Macondo;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 52.79999923706055px;
+}
+.Comfy-outer {
+  pointer-events: none;
+  z-index: 8;
+  position: relative;
+  display: flex;
+}
+.login {
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+  margin-left: 93.1%;
+  width: 45px;
+  min-width: 45px;
+  margin-top: -76px;
+  margin-bottom: 25px;
+  min-height: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-style: normal;
+  font-family: Macondo;
+  font-weight: 400;
+  /* position: relative; */
+  font-size: 21px;
+  line-height: 24.80000114440918px;
+}
+.login-outer {
+  pointer-events: none;
+  z-index: 10;
+  position: relative;
+  display: flex;
+}
+.sign-up {
+  position: relative;
+  z-index: 9;
+  pointer-events: none;
+  margin-left: 15.7%;
+  width: 67px;
+  min-width: 67px;
+  margin-top: -76px;
+  margin-bottom: 25px;
+  min-height: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-style: normal;
+  font-family: Macondo;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 24.80000114440918px;
+}
+.sign-up-outer {
+  pointer-events: none;
+  z-index: 9;
+  position: relative;
+  display: flex;
+  margin-left: 80%;
+}
+.Man-Head-Silhouette {
+  position: relative;
+  z-index: 19;
+  pointer-events: none;
+  margin-left: 58px;
+  width: 410.11px;
+  min-width: 410.11px;
+  height: 469.09px;
+  margin-top: -894px;
+  margin-bottom: 424.9100000000001px;
+  min-height: 469.09px;
+  content: url(assets/images/Man_Head_Silhouette.png?tid=1635582091451);
+}
+.Man-Head-Silhouette-outer {
+  pointer-events: none;
+  z-index: 19;
+  position: relative;
+  display: flex;
+}
+.broken-heart {
+  position: relative;
+  z-index: 20;
+  pointer-events: none;
+  margin-left: 217px;
+  width: 158.79px;
+  min-width: 158.79px;
+  height: 137.41px;
+  margin-top: -375px;
+  margin-bottom: 237.59000000000003px;
+  min-height: 137.41px;
+}
+.broken-heart-outer {
+  pointer-events: none;
+  z-index: 20;
+  position: relative;
+  display: flex;
+}
+.layer1-2 {
+  position: relative;
+  z-index: 21;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 158.79px;
+  min-width: 158.79px;
+  height: 137.41px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 137.41px;
+}
+.layer1-2-outer {
+  pointer-events: none;
+  z-index: 21;
+  position: relative;
+  display: flex;
+}
+.g9093 {
+  position: relative;
+  z-index: 23;
+  pointer-events: none;
+  margin-left: 4px;
+  width: 135.38px;
+  min-width: 135.38px;
+  height: 126.63px;
+  margin-top: 1px;
+  margin-bottom: 9.779999999999973px;
+  min-height: 126.63px;
+}
+.g9093-outer {
+  pointer-events: none;
+  z-index: 23;
+  position: relative;
+  display: flex;
+}
+.path9088 {
+  position: relative;
+  z-index: 26;
+  pointer-events: none;
+  margin-left: 45.05835426207712%;
+  width: 54.57231496528291%;
+  height: 98.02574429440101%;
+  margin-top: 2.954646181119811%;
+  content: url(assets/images/path9088.png?tid=1635582091451);
+}
+.path9088-outer {
+  pointer-events: none;
+  z-index: 26;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.path9084 {
+  position: relative;
+  z-index: 25;
+  pointer-events: none;
+  margin-left: -0.7386615452799526%;
+  width: 101.96483971044465%;
+  height: 57.308694622127454%;
+  margin-top: 14.773230905599052%;
+  content: url(assets/images/path9084.png?tid=1635582091451);
+}
+.path9084-outer {
+  pointer-events: none;
+  z-index: 25;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.path9082 {
+  position: relative;
+  z-index: 24;
+  pointer-events: none;
+  margin-left: 14.773230905599055%;
+  width: 23.76274191165608%;
+  height: 85.03514175155966%;
+  margin-top: -0.7386615452799528%;
+  content: url(assets/images/path9082.png?tid=1635582091451);
+}
+.path9082-outer {
+  pointer-events: none;
+  z-index: 24;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.path3438 {
+  position: relative;
+  z-index: 28;
+  pointer-events: none;
+  margin-left: 72.42269664336547%;
+  width: 18.962151268971603%;
+  height: 27.559857361181862%;
+  margin-top: 6.297625795075258%;
+  content: url(assets/images/path3438.png?tid=1635582091451);
+}
+.path3438-outer {
+  pointer-events: none;
+  z-index: 28;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.path3416 {
+  position: relative;
+  z-index: 27;
+  pointer-events: none;
+  margin-left: 0.6297625795075257%;
+  width: 46.703192896278104%;
+  height: 92.19852994687432%;
+  margin-top: 3.778575477045154%;
+  content: url(assets/images/path3416.png?tid=1635582091451);
+}
+.path3416-outer {
+  pointer-events: none;
+  z-index: 27;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.path12952 {
+  position: relative;
+  z-index: 22;
+  pointer-events: none;
+  margin-left: -0.6297625795075258%;
+  width: 100.91945336608102%;
+  height: 101.0625136452951%;
+  margin-top: -0.6297625795075258%;
+  content: url(assets/images/path12952.png?tid=1635582091451);
+}
+.path12952-outer {
+  pointer-events: none;
+  z-index: 22;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.layer1-1 {
+  position: relative;
+  z-index: 29;
+  pointer-events: none;
+  margin-left: 12px;
+  width: 55.43px;
+  min-width: 55.43px;
+  height: 39.59px;
+  margin-top: -113.41px;
+  margin-bottom: 73.81999999999994px;
+  min-height: 39.59px;
+  content: url(assets/images/layer1_1.png?tid=1635582091451);
+}
+.layer1-1-outer {
+  pointer-events: none;
+  z-index: 29;
+  position: relative;
+  display: flex;
+}
+.layer1 {
+  position: relative;
+  z-index: 30;
+  pointer-events: none;
+  margin-left: 83px;
+  width: 46.46px;
+  min-width: 46.46px;
+  height: 52.71px;
+  margin-top: -95.41px;
+  margin-bottom: 42.69999999999993px;
+  min-height: 52.71px;
+  content: url(assets/images/layer1.png?tid=1635582091451);
+}
+.layer1-outer {
+  pointer-events: none;
+  z-index: 30;
+  position: relative;
+  display: flex;
+}
+.chat-bot {
+  position: relative;
+  z-index: 11;
+  pointer-events: none;
+  margin-left: 75%;
+  width: 388px;
+  min-width: 388px;
+  height: 85px;
+  margin-top: -296px;
+  margin-bottom: 211px;
+  min-height: 85px;
+  /* border-radius: unset; */
+}
+.chat-bot-outer {
+  pointer-events: none;
+  z-index: 11;
+  position: relative;
+  display: flex;
+}
+.chat-icon {
+  position: relative;
+  z-index: 12;
+  pointer-events: none;
+  margin-left: 303px;
+  width: 85px;
+  min-width: 85px;
+  height: 85px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 85px;
+}
+.chat-icon-outer {
+  pointer-events: none;
+  z-index: 12;
+  position: relative;
+  display: flex;
+}
+.Ellipse-1 {
+  position: relative;
+  z-index: 13;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 85px;
+  min-width: 85px;
+  height: 85px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 85px;
+  content: url(assets/images/Ellipse_1.png?tid=1635582091451);
+}
+.Ellipse-1-outer {
+  pointer-events: none;
+  z-index: 13;
+  position: relative;
+  display: flex;
+}
+.icons8-chat-50-1 {
+  position: relative;
+  z-index: 14;
+  pointer-events: none;
+  margin-left: 15px;
+  width: 55px;
+  min-width: 55px;
+  height: 55px;
+  margin-top: -70px;
+  margin-bottom: 15px;
+  min-height: 55px;
+  content: url(assets/images/icons8_chat_50_1.png?tid=1635582091451);
+}
+.icons8-chat-50-1-outer {
+  pointer-events: none;
+  z-index: 14;
+  position: relative;
+  display: flex;
+}
+.chat-bot-explainatio {
+  position: relative;
+  z-index: 15;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 318px;
+  min-width: 318px;
+  height: 52px;
+  margin-top: -67px;
+  margin-bottom: 15px;
+  min-height: 52px;
+}
+.chat-bot-explainatio-outer {
+  pointer-events: none;
+  z-index: 15;
+  position: relative;
+  display: flex;
+}
+.Group-1 {
+  position: relative;
+  z-index: 16;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 318px;
+  min-width: 318px;
+  height: 52px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 52px;
+}
+.Group-1-outer {
+  pointer-events: none;
+  z-index: 16;
+  position: relative;
+  display: flex;
+}
+.Rectangle-5 {
+  position: relative;
+  z-index: 17;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 318px;
+  min-width: 318px;
+  height: 52px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 52px;
+  background-color: rgba(202, 239, 209, 1);
+}
+.Rectangle-5-outer {
+  pointer-events: none;
+  z-index: 17;
+  position: relative;
+  display: flex;
+}
+.Music-and-Activities {
+  position: relative;
+  z-index: 18;
+  pointer-events: none;
+  margin-left: 9px;
+  width: 288px;
+  min-width: 288px;
+  margin-top: -47px;
+  margin-bottom: 8px;
+  min-height: 39px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-style: normal;
+  font-family: Philosopher;
+  font-weight: 400;
+  font-size: 17.850000381469727px;
+  line-height: 20px;
+}
+.Music-and-Activities-outer {
+  pointer-events: none;
+  z-index: 18;
+  position: relative;
+  display: flex;
+}
+.footer {
+  position: relative;
+  z-index: 3;
+  pointer-events: none;
+  margin-left: 0px;
+  width: 100%;
+  min-width: 1440px;
+  height: 187px;
+  margin-top: -187px;
+  margin-bottom: 0px;
+  min-height: 187px;
+  background-color: rgba(202, 244, 244, 1);
+}
+.footer-outer {
+  pointer-events: none;
+  z-index: 3;
+  position: relative;
+  display: flex;
+}
