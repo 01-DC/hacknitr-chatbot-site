@@ -4,6 +4,9 @@
     background-color: #FDE0D9;
     align-items: center;
     display: flex;
+    position: absolute;
+    z-index: 5;
+    width:inherit;
 }
 
 .logo {
@@ -13,7 +16,7 @@
 }
 
 .menu {
-    float: right;
+    align-self: flex-end;
 }
 
 .menu-item {
