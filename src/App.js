@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
-import ChatBot from 'react-simple-chatbot';
+import Navbar from "./components/navbar";
+import Popup from "./Popup";
 
-const steps = [
-  {
-    id: '0',
-    message: 'Welcome to react chatbot!',
-    trigger: '1',
-  },
-  {
-    id: '1',
-    message: 'Bye!',
-    end: true,
-  },
-];
+export default class App extends React.Component {
+  state = {
+    seen: false
+  };
 
-function App() {
-  return (
-    <ChatBot steps= {steps} />
-  );
+  togglePop = () => {
+    this.setState({
+      seen: !this.state.seen
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <div>
+          <button class="btn" onClick={this.togglePop}>Music and Song suggestions</button>
+        </div>
+        <div>
+          {this.state.seen ? <Popup toggle={this.togglePop} /> : null}
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+
+// export default App;
