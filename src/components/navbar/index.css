@@ -1,22 +1,23 @@
 .nav {
     font-family: 'Macondo', cursive;
-    padding: 15px 20px 5px 20px;
+    padding: 15px;
     background-color: #FDE0D9;
     align-items: center;
-    display: flex;
-    position: absolute;
     z-index: 5;
-    width:inherit;
-}
-
-.logo {
-    font-size: 48px;
-    font-weight: 400;
-    font-size: 45px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu {
-    align-self: flex-end;
+    margin-right: 7vw;
+}
+
+.logo h1 {
+    font-size: 48px;
+    font-weight: 400;
+    font-size: 45px;
+    margin-left: 5vw;
 }
 
 .menu-item {
@@ -27,5 +28,5 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.4);
-    margin: 5px;
+    margin: 1vw 1vw;
 }

@@ -1,6 +1,5 @@
 import React from "react";
-import Popup from "./Popup";
-
+import Bot from "./Bot"
 
 export default class chat extends React.Component {
     state = {
@@ -16,18 +15,11 @@ export default class chat extends React.Component {
     render() {
         return (
             <div>
-                <div style= {{alignItems: "center"}}>
-                {this.state.seen ? <Popup toggle={this.togglePop} /> : null}
-                </div>
-                <button className="btn" onClick={this.togglePop} style={{
-                    backgroundColor: "#CAEFD1",
-                    border: "none",
-                    color: "black",
-                    padding: "15px 32px",
-                    textAlign: "center",
-                    textDecoration: "none",
-                    fontSize: "16px",
-                }}>Music and Activities recommendation according to your mood</button>
+              <div style={{backgroundColor: "#CAEFD1", padding: "20px", borderRadius: "10px", boxShadow: "2px 2px 8px 1px rgba(0,0,0,0.4)"}}>
+                <h2 style={{fontFamily:"'Macondo', cursive",}}>You can chat with Comfy in the window below!</h2>
+                <h2 style={{fontFamily:"'Macondo', cursive",}}>Comfy can recommend you songs based on your mood.</h2>
+              </div>
+              <Bot />
             </div>
         );
     }

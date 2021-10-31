@@ -11,7 +11,7 @@ export default class App extends React.Component {
         <div>
           <Navbar />
         </div>
-        <div style={{backgroundColor: "#FCFFE9", height: "100vh", padding: "20px", display: "flex",}}>
+        <div style={{backgroundColor: "#FCFFE9", height: "100vh", padding: "20px", display: "flex", justifyContent: "space-around"}}>
           <Imagediv />
           <Chat />
         </div>

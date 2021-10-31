@@ -2,4 +2,6 @@ html {
     padding: 0px;
     margin: 0px;
     text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
 }

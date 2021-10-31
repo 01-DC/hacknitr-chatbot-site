@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
 import ChatBot from 'react-simple-chatbot';
+import Logo from "./icon.png"
 // import axios from 'axios';
 
 const theme = {
@@ -154,7 +155,7 @@ export default class Bot extends Component {
     render() {
         return (
           <ThemeProvider theme={theme}>
-          <ChatBot steps={steps} />;
+          <ChatBot steps={steps} cache={true} floating={true} floatingIcon={`${Logo}`} headerTitle={"Comfy"} width={"520px"} opened={true}/>;
         </ThemeProvider>
         );
     }

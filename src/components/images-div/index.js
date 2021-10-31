@@ -6,8 +6,12 @@ export default class imagediv extends React.Component {
     render() {
         return (
           <div style={{display: "flex-column"}}>
-            <img src={image1} alt="think-head" style={{height: "350px"}}/>
-            <img src={image2} alt="heart.png" style={{height: "250px"}}/>
+            <div>
+              <img src={image1} alt="think-head" style={{height: "350px", margin: "1vh"}}/>
+            </div>
+            <div>
+              <img src={image2} alt="heart.png" style={{height: "250px"}}/>
+            </div>
           </div>
         );
     }
