@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
 import ChatBot from 'react-simple-chatbot';
 import Logo from "./icon.png"
-// import axios from 'axios';
 
 const theme = {
   background: '#f5f8fb',
@@ -16,24 +15,24 @@ const theme = {
   userFontColor: '#4a4a4a',
 };
 
-// var emotion= "";
+// // var emotion= "";
 
 // function Botresponse(val) {
 
-//     axios.get(`http://localhost:5000/pred/"${val}"`).then(response => {
-//       console.log("SUCCESS", response)
-
+//     var emotion;
+//     fetch(`http://localhost:5000/pred/"${val}"`).then(response => {
+//       console.log("SUCCESS", response);
+//       emotion= response.json();
 //     }).catch(error => {
-//       console.log(error)
-
+//       console.log(error);
 //   })
 
-//   fetch(`/pred/"${val}"`)
-//               .then(response => {
-//                 console.log(response)
-//               }).catch(err=>{
-//                   console.log(err);
-//               })
+//   // fetch(`/pred/"${val}"`)
+//   //             .then(response => {
+//   //               console.log(response)
+//   //             }).catch(err=>{
+//   //                 console.log(err);
+//   //             })
 
 //   return (
 //     `${emotion}`
