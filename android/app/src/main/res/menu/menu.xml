@@ -7,5 +7,8 @@
     <item
         android:id="@+id/songs"
         android:title="Recommend Songs"/>
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"/>
 
 </menu>

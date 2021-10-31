@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Alexia</string>
+    <string name="app_name">Comfy</string>
+    <string name="com_auth0_domain">dev-ebvgiael.us.auth0.com</string>
 </resources>

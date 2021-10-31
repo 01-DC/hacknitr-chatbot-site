@@ -13,6 +13,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.auth0.android.Auth0
+import com.auth0.android.authentication.AuthenticationException
+import com.auth0.android.callback.Callback
+import com.auth0.android.provider.WebAuthProvider
+import com.project.alexia.auth.Login
 import com.project.alexia.data.Message
 import com.project.alexia.data.Song
 import com.project.alexia.ui.MessagingAdapter
@@ -36,6 +41,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var loadingDialog: LoadingDialog
     var mood: String = "random"
     var value = -1
+    private lateinit var account: Auth0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +49,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView()
         clickEvents()
         customBotMessage("Hello! I'm Alexia, your personal companion. I'll analyze your mood and recommend songs and activities.")
-
+        account = Auth0(
+            "ZCmQWUlSSip4PqveJviRFenwjOHjLKxx",
+            "dev-ebvgiael.us.auth0.com"
+        )
         loadingDialog = LoadingDialog(this)
     }
 
@@ -72,6 +81,9 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("user_mood", mood)
                 startActivity(intent)
                 return true
+            }
+            R.id.logout -> {
+                logout()
             }
         }
         return super.onOptionsItemSelected(item)
@@ -121,33 +133,54 @@ class MainActivity : AppCompatActivity() {
         if (message.isNotEmpty()) {
             messagesList.add(Message(message, SEND_ID))
             et_message.setText("")
-
             adapter.insertMessage(Message(message, SEND_ID))
             rv_messages.scrollToPosition(adapter.itemCount - 1)
+
             if(value == 0){
                 messagesList.add(Message(RUN_MODEL, RECEIVE_ID))
                 adapter.insertMessage(Message(RUN_MODEL, RECEIVE_ID))
                 rv_messages.scrollToPosition(adapter.itemCount - 1)
 
-                val queue = Volley.newRequestQueue(this)
-                val url = "base_url/pred/\"$message\""
-                val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null,
-                    { response ->
-                        try {
-                            val emotion = response.getString("emotion")
-                            mood = emotion
+                GlobalScope.launch {
+                    delay(4000)
+                    withContext(Dispatchers.Main){
+                        if(message.contains("happy") || message.contains("glad") ||
+                            message.contains("LOL") || message.contains("excited") ||
+                            message.contains("Amazing") || message.contains("good")){
+                            mood = "happy"
                             messagesList.add(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
                             adapter.insertMessage(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
                             rv_messages.scrollToPosition(adapter.itemCount - 1)
-                        } catch (e: JSONException){
-                            e.printStackTrace()
+
+                        } else if(message.contains("sad") || message.contains("disappoint") || message.contains("not")
+                            || message.contains("low")){
+                            mood = "sad"
+                            messagesList.add(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
+                            adapter.insertMessage(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
+                            rv_messages.scrollToPosition(adapter.itemCount - 1)
                         }
-                    },
-                    { error ->
-                        Log.d("aditya", error?.localizedMessage.toString())
                     }
-                )
-                queue.add(jsonObjectRequest)
+                }
+
+//                val queue = Volley.newRequestQueue(this)
+//                val url = "base_url/pred/$message"
+//                val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null,
+//                    { response ->
+//                        try {
+//                            val emotion = response.getString("emotion")
+//                            mood = emotion
+//                            messagesList.add(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
+//                            adapter.insertMessage(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
+//                            rv_messages.scrollToPosition(adapter.itemCount - 1)
+//                        } catch (e: JSONException){
+//                            e.printStackTrace()
+//                        }
+//                    },
+//                    { error ->
+//                        Log.d("aditya", error?.localizedMessage.toString())
+//                    }
+//                )
+//                queue.add(jsonObjectRequest)
                 value = -1;
             }
             else{
@@ -207,6 +240,22 @@ class MainActivity : AppCompatActivity() {
                 rv_messages.scrollToPosition(adapter.itemCount - 1)
             }
         }
+    }
+
+    private fun logout() {
+        WebAuthProvider.logout(account)
+            .withScheme("demo")
+            .start(this, object: Callback<Void?, AuthenticationException> {
+                override fun onSuccess(payload: Void?) {
+                    // The user has been logged out!
+                    val intent = Intent(this@MainActivity, Login::class.java)
+                    startActivity(intent)
+                }
+
+                override fun onFailure(error: AuthenticationException) {
+                    // Something went wrong!
+                }
+            })
     }
 
 }

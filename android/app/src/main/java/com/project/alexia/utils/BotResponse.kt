@@ -47,19 +47,6 @@ object BotResponse {
                 "How are you feeling today ?"
             }
 
-//            //Song request
-//            message.contains("happy") || message.contains("glad") ||
-//                    message.contains("LOL") || message.contains("excited") ||
-//                    message.contains("Amazing") || message.contains("good")-> {
-//                OPEN_SEARCH_HAPPY
-//            }
-
-//            //Song request
-//            message.contains("sad") || message.contains("disappoint") || message.contains("not")
-//                    || message.contains("low") -> {
-//                OPEN_SEARCH_SAD
-//            }
-
             //When the programme doesn't understand...
             else -> {
                 when (random) {

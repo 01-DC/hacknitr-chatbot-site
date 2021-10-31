@@ -15,6 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [auth0Domain: "@string/com_auth0_domain", auth0Scheme: "demo"]
     }
 
     buildTypes {
@@ -54,4 +55,7 @@ dependencies {
 
     implementation "com.airbnb.android:lottie:3.4.0"
     implementation "com.android.volley:volley:1.2.1"
+
+    // Add the Auth0 Android SDK
+    implementation 'com.auth0.android:auth0:2.+'
 }

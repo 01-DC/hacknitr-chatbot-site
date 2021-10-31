@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/receive_round_box.xml" value="0.18333333333333332" />
+        <entry key="app/src/main/res/drawable/send_round_box.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/drawable/splash_img.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/layout/activity_activities.xml" value="0.1671875" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15208333333333332" />
         <entry key="app/src/main/res/layout/activity_songs.xml" value="0.1671875" />
         <entry key="app/src/main/res/layout/custom_dialog.xml" value="0.33" />
