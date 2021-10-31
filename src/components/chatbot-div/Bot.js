@@ -136,7 +136,7 @@ const steps = [
   {
     id: '9',
     component: (
-      <a href="https://www.w3schools.com/jsref/jsref_random.asp" target="_blank" rel="noreferrer">Here is your song</a>
+      <a href="https://www.youtube.com/watch?v=LbUpPVOEkdA" target="_blank" rel="noreferrer">Here is your song</a>
     ),
     asMessage: true,
     end: true,
@@ -144,7 +144,7 @@ const steps = [
   {
     id: '10',
     component: (
-      <a href="https://www.w3schools.com/jsref/jsref_random.asp" target="_blank" rel="noreferrer">Here is your song</a>
+      <a href="https://www.youtube.com/watch?v=KUCyjDOlnPU" target="_blank" rel="noreferrer">Here is your song</a>
     ),
     asMessage: true,
     end: true,
