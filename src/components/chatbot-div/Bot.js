@@ -77,7 +77,7 @@ function generateResponse(args) {
 const steps = [
   {
     id: '0',
-    message: 'Hello! I\'m Comfy, your personal companion. I\'ll recommend you songs based on your mood.',
+    message: 'Hello! I\'m Alexia, your personal companion. I\'ll recommend you songs based on your mood.',
     trigger: '1',
   },
   {
@@ -155,7 +155,7 @@ export default class Bot extends Component {
     render() {
         return (
           <ThemeProvider theme={theme}>
-          <ChatBot steps={steps} cache={true} floating={true} floatingIcon={`${Logo}`} headerTitle={"Comfy"} width={"520px"} opened={true}/>;
+          <ChatBot steps={steps} floating={true} floatingIcon={`${Logo}`} headerTitle={"Comfy ReactJS"} width={"520px"} opened={true}/>;
         </ThemeProvider>
         );
     }
