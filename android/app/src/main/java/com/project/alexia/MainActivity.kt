@@ -141,46 +141,25 @@ class MainActivity : AppCompatActivity() {
                 adapter.insertMessage(Message(RUN_MODEL, RECEIVE_ID))
                 rv_messages.scrollToPosition(adapter.itemCount - 1)
 
-                GlobalScope.launch {
-                    delay(4000)
-                    withContext(Dispatchers.Main){
-                        if(message.contains("happy") || message.contains("glad") ||
-                            message.contains("LOL") || message.contains("excited") ||
-                            message.contains("Amazing") || message.contains("good")){
-                            mood = "happy"
+                val queue = Volley.newRequestQueue(this)
+                val url = "https://flask-api-emotion-detection.herokuapp.com/?message=$message"
+                val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null,
+                    { response ->
+                        try {
+                            val emotion = response.getString("emotion")
+                            mood = emotion
                             messagesList.add(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
                             adapter.insertMessage(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
                             rv_messages.scrollToPosition(adapter.itemCount - 1)
-
-                        } else if(message.contains("sad") || message.contains("disappoint") || message.contains("not")
-                            || message.contains("low")){
-                            mood = "sad"
-                            messagesList.add(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
-                            adapter.insertMessage(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
-                            rv_messages.scrollToPosition(adapter.itemCount - 1)
+                        } catch (e: JSONException){
+                            e.printStackTrace()
                         }
+                    },
+                    { error ->
+                        Log.d("aditya", error?.localizedMessage.toString())
                     }
-                }
-
-//                val queue = Volley.newRequestQueue(this)
-//                val url = "base_url/pred/$message"
-//                val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null,
-//                    { response ->
-//                        try {
-//                            val emotion = response.getString("emotion")
-//                            mood = emotion
-//                            messagesList.add(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
-//                            adapter.insertMessage(Message(OPEN_SONG_ACTIVITY, RECEIVE_ID))
-//                            rv_messages.scrollToPosition(adapter.itemCount - 1)
-//                        } catch (e: JSONException){
-//                            e.printStackTrace()
-//                        }
-//                    },
-//                    { error ->
-//                        Log.d("aditya", error?.localizedMessage.toString())
-//                    }
-//                )
-//                queue.add(jsonObjectRequest)
+                )
+                queue.add(jsonObjectRequest)
                 value = -1;
             }
             else{
